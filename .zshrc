@@ -111,5 +111,15 @@ alias gd="git diff --color | diff-so-fancy"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
+function gch {
+    readonly branch_name=${1:?"Branch name must be specified."}
+    git checkout "$branch_name"
+}
+
+function gbd {
+    readonly branch_name=${1:?"Branch name must be specified."}
+    git branch -D "$branch_name"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
