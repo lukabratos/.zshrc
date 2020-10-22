@@ -115,7 +115,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias gst="git status -sb"
 alias gb="git branch"
-alias gd="git diff --color | diff-so-fancy"
+alias gd="git diff"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
